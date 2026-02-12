@@ -1,77 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Miguel Ink</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Miguel Ink</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #ffffff;
-      color: #000;
-      text-align: center;
-    }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #000;
+  text-align: center;
+}
 
-    .site-header {
-      padding: 50px 20px;
-    }
+header {
+  padding: 50px 20px;
+}
 
-    .logo {
-      max-width: 420px;
-      width: 100%;
-      height: auto;
-    }
+.logo {
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+}
 
-    .hero {
-      padding: 40px 20px;
-    }
+.hero {
+  padding: 40px 20px 80px;
+}
 
-    .hero h1 {
-      font-size: 48px;
-      font-weight: 900;
-      letter-spacing: 2px;
-    }
+.hero h1 {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
 
-    .hero span {
-      color: #e10600; /* strong red accent */
-    }
+.hero span {
+  color: #e10600;
+}
 
-    .cta-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 35px;
-      background-color: #e10600;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: 0.3s ease;
-    }
+.hero p {
+  margin-top: 15px;
+  font-size: 18px;
+}
 
-    .cta-button:hover {
-      background-color: #000;
-    }
-  </style>
+.cta {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 35px;
+  background: #e10600;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: #000;
+}
+
+.section {
+  padding: 80px 20px;
+  border-top: 1px solid #eee;
+}
+
+.section h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 450px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #000;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: #e10600;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #000;
+}
+
+footer {
+  padding: 40px 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+</style>
 </head>
 
 <body>
 
-  <header class="site-header">
-    <img src="file_000000009af8720698284795f6c0d4e1.png" alt="Miguel Ink Logo" class="logo">
-  </header>
+<header>
+  <img src="file_000000009af8720698284795f6c0d4e1.png" alt="Miguel Ink Logo" class="logo">
+</header>
 
-  <section class="hero">
-    <h1>MIGUEL <span>INK</span></h1>
-    <p>Bold. Clean. Professional Tattoo Work.</p>
-    <a href="#contact" class="cta-button">BOOK NOW</a>
-  </section>
+<section class="hero">
+  <h1>MIGUEL <span>INK</span></h1>
+  <p>Bold. Clean. Professional Tattoo Work.</p>
+  <a href="#contact" class="cta">BOOK NOW</a>
+</section>
+
+<section class="section" id="contact">
+  <h2>BOOK A SESSION</h2>
+
+  <form action="https://formspree.io/forms/mbdagyjw" method="POST">
+
+    <input type="hidden" name="_next" value="https://siobhantipton97-hue.github.io/miguel-ink/thankyou.html">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Describe your tattoo idea" required></textarea>
+
+    <button type="submit">SEND REQUEST</button>
+
+  </form>
+</section>
+
+<footer>
+  © 2026 Miguel Ink — All Rights Reserved
+</footer>
 
 </body>
 </html>
