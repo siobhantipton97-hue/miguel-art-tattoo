@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-L1C4741DCZ');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miguel Art Tattoo</title>
@@ -489,14 +498,30 @@ mobileInput.addEventListener("input", function(e) {
 <div class="floating-contact">
   
   <!-- WhatsApp -->
-  <a href="https://wa.me/YOURNUMBER" target="_blank" class="whatsapp-btn">
-    WhatsApp
-  </a>
+ <a href="https://wa.me/YOURNUMBER"
+   target="_blank"
+   class="whatsapp-btn"
+   onclick="trackContact('whatsapp')">
+   WhatsApp
+</a>
 
   <!-- LINE -->
-  <a href="YOUR_LINE_LINK" target="_blank" class="line-btn">
-    LINE
-  </a>
+  <a href="YOUR_LINE_LINK"
+   target="_blank"
+   class="line-btn"
+   onclick="trackContact('line')">
+   LINE
+</a>
+    <script>
+function trackContact(platform) {
+  if (typeof gtag !== "undefined") {
+    gtag('event', 'contact_click', {
+      event_category: 'engagement',
+      event_label: platform
+    });
+  }
+}
+</script>
 
 </div>
 </body>
