@@ -328,29 +328,39 @@ h2 {
     }
   });
 
-  /* AUTO FORMAT MOBILE NUMBER */
-  mobileInput.addEventListener("input", function(e) {
-    let value = e.target.value.replace(/[^\d+]/g, "");
+ /* AUTO FORMAT MOBILE NUMBER - INTERNATIONAL */
+const mobileInput = document.getElementById("mobile");
 
-    if (value.indexOf("+") > 0) {
-      value = value.replace(/\+/g, "");
-    }
+mobileInput.addEventListener("input", function(e) {
+  let value = e.target.value;
 
-    if (value.startsWith("+66")) {
-      value = value.replace("+66", "");
-      value = value.substring(0, 9);
-      value = value.replace(/(\d{2})(\d{3})(\d{0,4})/, function(_, a, b, c) {
-        return "+66 " + a + (b ? " " + b : "") + (c ? " " + c : "");
-      });
-    } else {
-      value = value.substring(0, 10);
-      value = value.replace(/(\d{3})(\d{3})(\d{0,4})/, function(_, a, b, c) {
-        return a + (b ? " " + b : "") + (c ? " " + c : "");
-      });
-    }
+  // Remove everything except digits and +
+  value = value.replace(/[^\d+]/g, "");
 
-    e.target.value = value;
-  });
+  // Allow + only at the start
+  if (value.indexOf("+") > 0) {
+    value = value.replace(/\+/g, "");
+  }
+
+  let prefix = "";
+  if (value.startsWith("+")) {
+    prefix = "+";
+    value = value.substring(1);
+  }
+
+  // Limit to 15 digits (international max standard)
+  value = value.substring(0, 15);
+
+  // Group digits in blocks of 3–4 for readability
+  let formatted = value.match(/.{1,4}/g);
+  if (formatted) {
+    formatted = formatted.join(" ");
+  } else {
+    formatted = value;
+  }
+
+  e.target.value = prefix + formatted;
+});
 </script>
 
 </body>
