@@ -269,12 +269,13 @@ h2 {
   <h2>Book an Appointment</h2>
   <div class="booking-box">
     <form id="booking-form" action="https://formspree.io/f/mbdagyjw" method="POST">
-      <input type="text" name="full_name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="idea" placeholder="Tattoo Idea / Placement">
-      <textarea name="description" placeholder="Describe your idea"></textarea>
-      <button type="submit">Submit Booking Request</button>
-    </form>
+  <input type="text" name="full_name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="tel" name="mobile" placeholder="Mobile Number" required pattern="[0-9+\s()-]{7,20}">
+  <input type="text" name="idea" placeholder="Tattoo Idea / Placement">
+  <textarea name="description" placeholder="Describe your idea"></textarea>
+  <button type="submit">Submit Booking Request</button>
+</form>
 
     <!-- Updated Success Message -->
     <p id="form-message" style="margin-top:20px; display:none; color:#ff0000; font-weight:bold; opacity:0;">
