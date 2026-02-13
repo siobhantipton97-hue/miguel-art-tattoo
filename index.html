@@ -34,7 +34,7 @@ nav {
 }
 
 .logo {
-  height: 80px;   /* ⬅ LOGO MADE BIGGER */
+  height: 80px;
   width: auto;
 }
 
@@ -49,9 +49,51 @@ nav a:hover {
   color: #8B0000;
 }
 
-/* HERO */
+/* HERO WITH SLIDESHOW */
 .hero {
-  padding: 120px 8%;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+/* Slideshow */
+.slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(400px * 60);
+  animation: scroll 90s linear infinite;
+}
+
+.slide-track img {
+  width: 400px;
+  height: 100vh;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: brightness(40%);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hero content above slideshow */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
 }
 
 .hero h1 {
@@ -94,6 +136,7 @@ nav a:hover {
 .section {
   padding: 120px 8%;
   border-top: 3px solid #000;
+  background: #fff;
 }
 
 .section h2 {
@@ -174,7 +217,8 @@ footer span {
 @media(max-width: 768px) {
   .hero h1 { font-size: 55px; }
   .section h2 { font-size: 38px; }
-  .logo { height: 55px; }  /* Slightly smaller on mobile */
+  .logo { height: 55px; }
+  .slide-track img { width: 300px; }
 }
 
 </style>
@@ -183,8 +227,7 @@ footer span {
 <body>
 
 <nav>
-  <img src="file_000000009af8720698284795f6c0d4e1.png" alt="Miguel Ink Logo" class="logo">
-
+  <img src="logo.png" alt="Miguel Ink Logo" class="logo">
   <div>
     <a href="#work">Work</a>
     <a href="#about">About</a>
@@ -193,9 +236,32 @@ footer span {
 </nav>
 
 <section class="hero">
-  <h1>Bold.<br>Clean.<br><span>Permanent.</span></h1>
-  <p>Custom blackwork and fine line tattoos in Chiang Mai. Precision. Detail. No compromises.</p>
-  <a href="#contact" class="btn">Book Appointment</a>
+
+  <!-- Slideshow Background -->
+  <div class="slideshow">
+    <div class="slide-track">
+
+      <!-- 30 Images -->
+      <!-- First Set -->
+      <script>
+        for (let i = 1; i <= 30; i++) {
+          document.write('<img src="images/tattoo' + i + '.jpg">');
+        }
+        for (let i = 1; i <= 30; i++) {
+          document.write('<img src="images/tattoo' + i + '.jpg">');
+        }
+      </script>
+
+    </div>
+  </div>
+
+  <!-- Hero Text -->
+  <div class="hero-content">
+    <h1>Bold.<br>Clean.<br><span>Permanent.</span></h1>
+    <p>Custom blackwork and fine line tattoos in Chiang Mai. Precision. Detail. No compromises.</p>
+    <a href="#contact" class="btn">Book Appointment</a>
+  </div>
+
 </section>
 
 <section class="section" id="work">
