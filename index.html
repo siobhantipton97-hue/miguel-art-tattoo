@@ -321,14 +321,17 @@ h2 {
 <section id="book">
   <h2>Book an Appointment</h2>
   <div class="booking-box">
-    <form action="https://formspree.io/f/mbdagyjw" method="POST">
-      <input type="text" name="full_name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="idea" placeholder="Tattoo Idea / Placement">
-      <textarea name="description" placeholder="Describe your idea"></textarea>
-     <input type="hidden" name="_redirect" value="https://siobhantipton97-hue.github.io/miguel-ink/thankyou.html">
-      <button type="submit">Submit Booking Request</button>
-    </form>
+    <form id="booking-form" action="https://formspree.io/f/mbdagyjw" method="POST">
+  <input type="text" name="full_name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="text" name="idea" placeholder="Tattoo Idea / Placement">
+  <textarea name="description" placeholder="Describe your idea"></textarea>
+  <button type="submit">Submit Booking Request</button>
+</form>
+
+<p id="form-message" style="margin-top:20px; display:none; color:#ff0000; font-weight:bold;">
+  Thank you. Your booking request has been sent. We will contact you soon.
+</p>
   </div>
 </section>
 
