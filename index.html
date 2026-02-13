@@ -48,66 +48,48 @@ nav a:hover {
   color: #8B0000;
 }
 
-/* HERO */
 .hero {
   position: relative;
   padding: 120px 8%;
   overflow: hidden;
 }
 
-/* SLIDESHOW BACKGROUND */
+/* Slideshow container */
 .slideshow {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200%;
+  width: 100%;
   height: 100%;
-  display: flex;
-  animation: scroll 80s linear infinite;
   z-index: 0;
+  overflow: hidden;
 }
 
-.slideshow img {
+/* Moving track */
+.slide-track {
+  display: flex;
+  width: calc(500px * 12);
+  animation: scroll 40s linear infinite;
+}
+
+/* Images */
+.slide-track img {
   width: 500px;
   height: 100%;
   object-fit: cover;
-  opacity: 0.08;   /* FADED EFFECT */
+  opacity: 0.12;
 }
 
-/* Dark overlay fade */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0.95) 100%);
-  z-index: 1;
-}
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
+/* Text above slideshow */
 .hero-content {
   position: relative;
   z-index: 2;
 }
 
-.hero h1 {
-  font-size: 80px;
-  font-weight: 900;
-  line-height: 0.95;
-  text-transform: uppercase;
-}
-
-.hero span {
-  color: #8B0000;
-}
-
-.hero p {
-  margin-top: 25px;
-  font-size: 20px;
-  max-width: 600px;
+/* Animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .btn {
@@ -223,28 +205,31 @@ footer span {
 
 <section class="hero">
 
-  <!-- FADED SLIDESHOW -->
+  <!-- SLIDESHOW BACKGROUND -->
   <div class="slideshow">
-    <!-- Duplicate set for seamless scroll -->
-    <img src="./images/tattoo1.jpg">
-    <img src="./images/tattoo2.jpg">
-    <img src="./images/tattoo3.jpg">
-    <img src="./images/tattoo4.jpg">
-    <img src="./images/tattoo5.jpg">
-    <img src="./images/tattoo6.jpg">
-    <img src="./images/tattoo7.jpg">
-    <img src="./images/tattoo8.jpg">
-    <img src="./images/tattoo9.jpg">
-    <img src="./images/tattoo10.jpg">
-    <img src="./images/tattoo11.jpg">
-    <img src="./images/tattoo12.jpg">
-    <img src="./images/tattoo1.jpg">
-    <img src="./images/tattoo2.jpg">
-    <img src="./images/tattoo3.jpg">
-    <img src="./images/tattoo4.jpg">
-    <img src="./images/tattoo5.jpg">
-    <img src="./images/tattoo6.jpg">
+    <div class="slide-track">
+      <img src="images/tattoo1.jpg">
+      <img src="images/tattoo2.jpg">
+      <img src="images/tattoo3.jpg">
+      <img src="images/tattoo4.jpg">
+      <img src="images/tattoo5.jpg">
+      <img src="images/tattoo6.jpg">
+      <img src="images/tattoo7.jpg">
+      <img src="images/tattoo8.jpg">
+      <img src="images/tattoo1.jpg">
+      <img src="images/tattoo2.jpg">
+      <img src="images/tattoo3.jpg">
+      <img src="images/tattoo4.jpg">
+    </div>
   </div>
+
+  <div class="hero-content">
+    <h1>Bold.<br>Clean.<br><span>Permanent.</span></h1>
+    <p>Custom blackwork and fine line tattoos in Chiang Mai. Precision. Detail. No compromises.</p>
+    <a href="#contact" class="btn">Book Appointment</a>
+  </div>
+
+</section>
 
   <div class="hero-content">
     <h1>Bold.<br>Clean.<br><span>Permanent.</span></h1>
