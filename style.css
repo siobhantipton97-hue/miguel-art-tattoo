@@ -124,3 +124,11 @@ footer {
     border-top: 2px solid black;
     font-size: 12px;
 }
+.work-box {
+    transition: 0.3s ease;
+}
+
+.work-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+}
