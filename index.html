@@ -1,156 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L1C4741DCZ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-L1C4741DCZ');
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miguel Art Tattoo</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miguel Art Tattoo</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
-
-
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
-  <img src="logo.png" alt="Miguel Art Tattoo Logo">
-  <ul>
-    <li><a href="#work">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#book">Book</a></li>
-  </ul>
-</nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <img src="logo.png" alt="Miguel Ink Logo">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#booking">Booking</a></li>
+      <li><a href="#location">Location</a></li>
+    </ul>
+  </nav>
 
-<div class="hero">
-  <div class="slideshow">
-    <img src="images/tattoo1.jpg">
-    <img src="images/tattoo2.jpg">
-    <img src="images/tattoo3.jpg">
-    <img src="images/tattoo4.jpg">
-    <img src="images/tattoo5.jpg">
-    <img src="images/tattoo6.jpg">
-    <img src="images/tattoo7.jpg">
-    <img src="images/tattoo8.jpg">
-    <img src="images/tattoo9.jpg">
-    <img src="images/tattoo10.jpg">
-  </div>
-
-  <h1>Bold. Clean. Permanent.</h1>
-  <p>Custom tattoos crafted with precision and intention.</p>
-  <button onclick="document.getElementById('book').scrollIntoView()">Book Appointment</button>
-</div>
-
-<section id="work">
-  <h2>Work</h2>
-  <div class="work-grid">
-    <div class="work-box">
-      <a href="minimalist.html">
-        <img src="images/minimalist.jpeg">
-        <h3>Minimalist</h3>
-      </a>
-    </div>
-    <div class="work-box">
-      <a href="custom.html">
-        <img src="images/custom.jpeg">
-        <h3>Custom</h3>
-      </a>
-    </div>
-    <div class="work-box">
-      <a href="spiritual.html">
-        <img src="images/spiritual.jpg">
-        <h3>Spiritual</h3>
-      </a>
-    </div>
-    <div class="work-box">
-      <a href="realism.html">
-        <img src="images/realism.jpg">
-        <h3>Realism</h3>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT US -->
-<section id="about" class="about">
-  <h2>About Us</h2>
-
-  <p>
-    Located near Anusarn Market in Chiang Mai, Thailand, Miguel Art Tattoo is a professional studio welcoming both local clients and international visitors.
-  </p>
-
-  <p>
-    We specialise in clean, detailed tattoo work with a strong focus on precision and long-lasting quality. From fine line and blackwork to fully custom designs, each piece is carefully developed through consultation.
-  </p>
-
-  <p>
-    Strict hygiene standards, professional equipment, and a calm studio environment ensure every client feels confident from start to finish.
-  </p>
-</section>
-
-<!-- FIND US -->
-<section id="location">
-  <div class="location-content">
-    <h2>Find Us</h2>
-    <p>Located near Anusarn Market, Chiang Mai, Thailand.</p>
-  </div>
-</section>
-
-<div class="map-container">
-  <iframe
-    src="https://www.google.com/maps?q=18.7827,99.0014&hl=en&z=17&output=embed"
-    loading="lazy">
-  </iframe>
-</div>
-
-<div class="directions-wrap">
-  <a href="https://www.google.com/maps/dir/?api=1&destination=18.7827,99.0014" class="directions-btn" target="_blank">
-    Get Directions
-  </a>
-</div>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <h1>Miguel Ink</h1>
+    <p>Custom Tattoo Art — Chiang Mai</p>
+    <a href="#booking" class="btn">Book Now</a>
   </section>
 
-<!-- CONTACT FORM -->
-<section id="contact">
-  <h2>Contact Us</h2>
+  <!-- WORK -->
+  <section id="work">
+    <h2>My Work</h2>
 
-  <div class="contact-form">
-    <form action="https://formspree.io/f/mbdagyjw" method="POST">
+    <div class="gallery">
+      <img src="images/1.jpg" alt="">
+      <img src="images/2.jpg" alt="">
+      <img src="images/3.jpg" alt="">
+      <img src="images/4.jpg" alt="">
+      <img src="images/5.jpg" alt="">
+      <img src="images/6.jpg" alt="">
+    </div>
+  </section>
 
-      <input type="text" name="full_name" placeholder="Full Name" required>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>
+      Specialising in blackwork, realism and custom design tattoos.
+      Every piece is designed uniquely for each client.
+    </p>
+  </section>
 
-      <input type="email" name="email" placeholder="Email Address" required>
+  <!-- BOOKING -->
+  <section id="booking" class="book">
+    <h2>Booking</h2>
+    <p>To book an appointment, please contact directly via WhatsApp or Instagram.</p>
+    <a href="https://wa.me/YOURNUMBER" class="btn" target="_blank">WhatsApp</a>
+  </section>
 
-      <input type="tel" name="mobile" placeholder="Mobile Number">
+  <!-- LOCATION -->
+  <section id="location">
+    <h2>Find Us</h2>
+    <p>Located near Anusarn Market, Chiang Mai, Thailand.</p>
 
-      <input type="text" name="idea" placeholder="Tattoo Idea / Placement">
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps?q=18.7827,99.0014&hl=en&z=17&output=embed"
+        loading="lazy">
+      </iframe>
+    </div>
 
-      <textarea name="message" placeholder="Describe your idea"></textarea>
+    <div class="directions-wrap">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=18.7827,99.0014"
+         target="_blank"
+         class="directions-btn">
+         Get Directions
+      </a>
+    </div>
+  </section>
 
-      <button type="submit">Send Message</button>
-
-    </form>
-  </div>
-</section>
-
-
-<div class="floating-contact">
-  <a href="https://wa.me/66XXXXXXXXX" target="_blank" class="whatsapp-btn">WhatsApp</a>
-  <a href="https://line.me/R/ti/p/@YOURID" target="_blank" class="line-btn">LINE</a>
-</div>
-
-<footer>
-  © 2026 Miguel Art Tattoo
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Miguel Ink Tattoo Studio — Chiang Mai
+  </footer>
 
 </body>
 </html>
