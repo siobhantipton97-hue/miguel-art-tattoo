@@ -69,6 +69,14 @@ nav ul li a {
   justify-content:center;
   padding:0 8%;
   overflow:hidden;
+  z-index:0;
+}
+
+.hero h1,
+.hero p,
+.hero button {
+  position:relative;
+  z-index:2;
 }
 
 .hero h1 {
@@ -76,14 +84,12 @@ nav ul li a {
   font-size:90px;
   letter-spacing:3px;
   text-transform:uppercase;
-  z-index:2;
 }
 
 .hero p {
   margin-top:20px;
   color:#aaa;
   font-size:18px;
-  z-index:2;
 }
 
 .hero button {
@@ -97,13 +103,12 @@ nav ul li a {
   text-transform:uppercase;
   cursor:pointer;
   transition:0.3s;
-  z-index:2;
 }
 
 .hero button:hover {
   background:#ff0000;
   color:#000;
-  box-shadow:0 0 25px rgba(255,0,0,0.8);
+  box-shadow:0 0 30px rgba(255,0,0,0.9);
 }
 
 /* HERO SLIDESHOW */
@@ -137,10 +142,10 @@ nav ul li a {
 .slideshow img:nth-child(10){animation-delay:36s;}
 
 @keyframes fade {
-  0% { opacity:0; }
-  5% { opacity:0.15; }
-  15% { opacity:0.15; }
-  20% { opacity:0; }
+  0%   { opacity:0; }
+  5%   { opacity:0.35; }
+  15%  { opacity:0.35; }
+  20%  { opacity:0; }
   100% { opacity:0; }
 }
 
@@ -174,7 +179,7 @@ h2 {
 
 .work-box img:hover {
   transform:scale(1.05);
-  box-shadow:0 0 30px rgba(255,0,0,0.7);
+  box-shadow:0 0 30px rgba(255,0,0,0.8);
   border:1px solid #ff0000;
 }
 
@@ -214,10 +219,10 @@ h2 {
 .booking-box button:hover {
   background:#ff0000;
   color:#000;
-  box-shadow:0 0 25px rgba(255,0,0,0.8);
+  box-shadow:0 0 30px rgba(255,0,0,0.9);
 }
 
-/* FLOATING GLOW BUTTONS */
+/* FLOATING CONTACT */
 .floating-contact {
   position:fixed;
   bottom:40px;
@@ -244,7 +249,7 @@ h2 {
 .line-btn:hover {
   background:#ff0000;
   color:#000;
-  box-shadow:0 0 30px rgba(255,0,0,0.9);
+  box-shadow:0 0 35px rgba(255,0,0,1);
 }
 
 /* FOOTER */
@@ -259,7 +264,80 @@ footer {
 @media (max-width:768px){
   .hero h1 { font-size:50px; }
   h2 { font-size:36px; }
+  .floating-contact { right:15px; bottom:20px; }
 }
 
 </style>
 </head>
+
+<body>
+
+<nav>
+  <img src="logo.png" alt="Miguel Art Tattoo Logo">
+  <ul>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#book">Book</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="slideshow">
+    <img src="images/tattoo1.jpg">
+    <img src="images/tattoo2.jpg">
+    <img src="images/tattoo3.jpg">
+    <img src="images/tattoo4.jpg">
+    <img src="images/tattoo5.jpg">
+    <img src="images/tattoo6.jpg">
+    <img src="images/tattoo7.jpg">
+    <img src="images/tattoo8.jpg">
+    <img src="images/tattoo9.jpg">
+    <img src="images/tattoo10.jpg">
+  </div>
+
+  <h1>Bold. Clean. Permanent.</h1>
+  <p>Custom tattoos crafted with precision and intention.</p>
+  <button onclick="document.getElementById('book').scrollIntoView()">Book Appointment</button>
+</div>
+
+<section id="work">
+  <h2>Work</h2>
+  <div class="work-grid">
+    <div class="work-box">
+      <a href="minimalist.html">
+        <img src="images/minimalist.jpeg">
+        <h3>Minimalist</h3>
+      </a>
+    </div>
+    <div class="work-box">
+      <a href="custom.html">
+        <img src="images/custom.jpeg">
+        <h3>Custom</h3>
+      </a>
+    </div>
+    <div class="work-box">
+      <a href="spiritual.html">
+        <img src="images/spiritual.jpg">
+        <h3>Spiritual</h3>
+      </a>
+    </div>
+    <div class="work-box">
+      <a href="realism.html">
+        <img src="images/realism.jpg">
+        <h3>Realism</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="floating-contact">
+  <a href="https://wa.me/66XXXXXXXXX" target="_blank" class="whatsapp-btn">WhatsApp</a>
+  <a href="https://line.me/R/ti/p/@YOURID" target="_blank" class="line-btn">LINE</a>
+</div>
+
+<footer>
+  © 2026 Miguel Art Tattoo
+</footer>
+
+</body>
+</html>
