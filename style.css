@@ -264,18 +264,21 @@ footer {
 .work-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 30px;
 }
 
 .work-box {
   position: relative;
+  aspect-ratio: 1 / 1;   /* Makes perfect square */
   overflow: hidden;
   display: block;
+  border: 2px solid #111;
+  transition: 0.4s ease;
 }
 
 .work-box img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
   transition: 0.5s ease;
 }
@@ -298,6 +301,13 @@ footer {
 
 .work-box:hover img {
   transform: scale(1.1);
+}
+
+/* 🔥 GLOWING BORDER ON HOVER */
+.work-box:hover {
+  border: 2px solid #ff0000;
+  box-shadow: 0 0 20px #ff0000,
+              0 0 40px rgba(255, 0, 0, 0.6);
 }
 
 .work-box:hover .overlay {
