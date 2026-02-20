@@ -577,3 +577,47 @@ section#hero .logo img {
 .social-btn:hover {
   transform: translateY(-2px);
 }
+/* ================= SOCIAL ICONS ================= */
+
+.social-section {
+  text-align: center;
+  padding: 60px 20px;
+  border-top: 1px solid #111;
+  background: #000;
+}
+
+.social-section h3 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.social-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #c00000;
+  border-radius: 50%;
+  color: #c00000;
+  transition: all 0.3s ease;
+}
+
+.social-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.social-icon:hover {
+  background: #c00000;
+  color: #000;
+  transform: scale(1.1);
+}
